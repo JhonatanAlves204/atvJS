@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomenda</title>
+</head>
+<body>
+    <p>Quantas Deseja de cada?</p>
+    <h1>Pedido:</h1>
+    Temos Lata 350ml<input type="number" name="lt" id="lt">
+    Temos Garrafa 600ml<input type="number" name="g6" id="g6">
+    Temos Garrafa de 2L<input type="number" name="g2" id="g2">
+    <input type="button" value="Verificar" onclick="Querococa()">
+    <div id="res">
+    
+    </div>
+
+    <script>
+
+        function Querococa(){
+        var lt = parseInt(document.getElementById('lt').value)
+        var g6 = parseInt(document.getElementById('g6').value)
+        var g2 = parseInt(document.getElementById('g2').value)
+            
+            var resultado = ((lt*350)+(g6*600)+(g2*2000))/1000
+            
+        var res = document.querySelector('div#res')
+        res.innerHTML = "Nossa empresa irá produzir " + resultado + " litros."   
+        }
+    </script>
+</body>
+</html>
